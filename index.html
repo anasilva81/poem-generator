@@ -1,48 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-    <title>AI Poem Generator</title>
-  </head>
-  <body>
-    <div class="box">
-      <header>
-        <h1>AI Poem Generator</h1>
-      </header>
 
-      <form action="">
-        <input
-          type="text"
-          id="tema"
-          placeholder="Enter a word/topic"
-          autofocus
-          required
-        />
-        <input type="button" value="Generate" id="generate" />
-      </form>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css" />
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <title>AI Poem Generator</title>
+</head>
 
-    <div id="poem-box">Here is the poem!</div>
+<body>
+  <div class="box">
+    <header>
+      <h1>AI Poem Generator</h1>
+    </header>
 
-    <footer>
-      This was coded by Ana Silva and is open sourced on
-      <a
-        href="https://github.com/anasilva81/poem-generator"
-        target="_blank"
-        rel="noopener noreferrer"
-        >GitHub</a
-      >
-      and is hosted on
-      <a
-        href="https://poem-generator-projecto.netlify.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Netlify</a
-      >.
-    </footer>
+    <form action="" id="poem-generator-form">
+      <input type="text" id="tema" placeholder="Enter a word/topic" autofocus required />
+      <input type="submit" value="Generate" id="generate" />
+    </form>
+  </div>
 
-    <script src="src/index.js"></script>
-  </body>
+  <div class="poem" id="poem-box"></div>
+
+  <footer>
+    This was coded by Ana Silva and is open sourced on
+    <a href="https://github.com/anasilva81/poem-generator" target="_blank" rel="noopener noreferrer">GitHub</a>
+    and is hosted on
+    <a href="https://poem-generator-projecto.netlify.app/" target="_blank" rel="noopener noreferrer">Netlify</a>.
+  </footer>
+
+  <script src="src/index.js"></script>
+</body>
+
 </html>

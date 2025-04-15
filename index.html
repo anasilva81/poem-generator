@@ -7,40 +7,41 @@
     <title>AI Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI Poem Generator</h1>
-    </header>
+    <div class="box">
+      <header>
+        <h1>AI Poem Generator</h1>
+      </header>
 
-    <body>
       <form action="">
         <input
           type="text"
-          name=""
-          id=""
+          id="tema"
           placeholder="Enter a word/topic"
           autofocus
           required
         />
         <input type="button" value="Generate" id="generate" />
       </form>
+    </div>
 
-      <div id="poem">Here is the poem!</div>
-    </body>
+    <div id="poem-box">Here is the poem!</div>
 
-    This was coded by Ana Silva and is open sourced on
-    <a
-      href="https://github.com/anasilva81/poem-generator"
-      target="_blank"
-      rel="noopener noreferrer"
-      >GitHub</a
-    >
-    and is hosted on
-    <a
-      href="https://poem-generator-projecto.netlify.app/"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Netlify</a
-    >.
+    <footer>
+      This was coded by Ana Silva and is open sourced on
+      <a
+        href="https://github.com/anasilva81/poem-generator"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub</a
+      >
+      and is hosted on
+      <a
+        href="https://poem-generator-projecto.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Netlify</a
+      >.
+    </footer>
 
     <script src="src/index.js"></script>
   </body>

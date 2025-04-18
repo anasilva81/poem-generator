@@ -70,6 +70,33 @@ body {
   .hidden {
     display: none;
   }
+
+  #copy-poem {
+    display: none;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #copy-poem:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+  }
+  
+  #copy-poem:active {
+    transform: scale(0.98);
+  }
+  
+  #copy-poem.show {
+    display: inline-block; 
+  }
   
   footer {
     margin-top: auto;

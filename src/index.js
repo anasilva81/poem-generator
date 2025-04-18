@@ -10,6 +10,8 @@ function displayPoem(response) {
         cursor: "",
       });
 
+      document.querySelector("#copy-poem").classList.add("show");
+
 }
 
 function generatePoem(event) {
@@ -25,7 +27,7 @@ function generatePoem(event) {
 
     let apiKey = "91b1f0t782317c69da4ae1170bo049f3";
     let prompt = `Instructions: Generate a poem about ${instructionsElement.value}`;
-    let context = "You are a classical poet who loves to write. When the user gives you an instruction you know right away how to construct a beautiful poem and you will provide with 2 stanzas, each stanza having 4 lines. You will not provide any other information or text, just the poem. Sign SheCodes AI at the end of the poem and it shoulb be in a smaller size letter and bold in HTML";
+    let context = "You are a classical poet who loves to write. When the user gives you an instruction you know right away how to construct a beautiful poem and you will provide with 2 stanzas, each stanza having 4 lines. You will not provide any other information or text, just the poem. Sign 'Poem generated using SheCodes AI' at the end of the poem and it shoulb be in a smaller size letter and bold in HTML";
     let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
     let poemBoxElement = document.querySelector("#poem-box");
@@ -37,3 +39,16 @@ function generatePoem(event) {
   
   let poemFormElement = document.querySelector("#poem-generator-form");
   poemFormElement.addEventListener("submit", generatePoem);
+
+  let copyButton = document.querySelector("#copy-poem");
+
+copyButton.addEventListener("click", function () {
+  let poemText = document.querySelector("#poem-box").innerText;
+
+  navigator.clipboard.writeText(poemText).then(function () {
+    copyButton.innerText = "✅ Copied!";
+    setTimeout(() => {
+      copyButton.innerText = "📋 Copy Poem";
+    }, 2000);
+  });
+});
